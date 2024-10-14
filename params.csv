@@ -1,0 +1,4 @@
+,cred_path,game_name,num_clips,timeframe,description,tags,title,episode
+0,./YTChannelCreds/DailyLOL.json,League of Legends,20,1,Top League Clips of Today,"['League','Highlights','Clips']",Top League Clips of The Day #,3
+1,./YTChannelCreds/TFTWeeklies.json,Teamfight Tactics,20,7,Top TFT Clips of This Week,"['TFT','Highlights','Clips']",Top TFT Clips of the Week #,3
+2,./YTChannelCreds/TopValoClips.json,Valorant,20,1,Top Valorant Clips of Today,"['Valorant','Highlights','Clips']",Top Valorant Clips of the Day #,2

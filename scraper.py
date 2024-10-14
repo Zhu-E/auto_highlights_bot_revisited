@@ -13,7 +13,7 @@ def get_video_url(clip_url, driver):
 
 def sanitize_filename(filename):
     # Remove or replace any characters that are not alphanumeric, spaces, or underscores
-    filename = re.sub(r'[\\/*?:"<>|]', "", filename)  # Remove invalid characters
+    filename = re.sub(r'[\\/*?\':"<>|]', "", filename)  # Remove invalid characters
     filename = filename.replace(" ", "_")  # Replace spaces with underscores
     return filename
 
@@ -41,13 +41,13 @@ def make_driver():
     return chrome_driver
 
 if __name__ == '__main__':
-    driver = make_driver()
+    google_driver = make_driver()
 
     oauth_token = twitchAPI.get_oauth_token()
     game_id = twitchAPI.get_game_id(oauth_token, 'League of Legends')
-    download_clips(twitchAPI.get_top_clips(game_id, oauth_token), driver, 'league_clips')
+    download_clips(twitchAPI.get_top_clips(oauth_token, game_id, 20, 'game', 1), google_driver, 'clips')
 
-    driver.quit()
+    google_driver.quit()
 
 
 
